@@ -3,7 +3,7 @@
 set -e
 
 # Your Ruby app's name
-APP_NAME="hello-world"
+APP_NAME="codeship-rebuild"
 # Your app's version, increment before deploys!
 APP_VERSION="1.0.0"
 TRAVELING_RUBY_VERSION="20150210-2.1.5"
@@ -11,13 +11,13 @@ TRAVELING_RUBY_VERSION="20150210-2.1.5"
 # Set this up in your ~/.aws/credentials
 # Use a profile that has the ability to put 
 # objects on S3 and update Lambda functions
-AWS_PROFILE="user-with-s3-and-lambda-privileges"
+AWS_PROFILE="default"
 # S3 Bucket where Lambda will find the Deployment Package
-AWS_BUCKET="your.bucket.net"
+AWS_BUCKET="lambda-function-deploys"
 # The S3 Key of the Deployment Package zip file
 AWS_KEY="lambda-functions/$APP_NAME-$APP_VERSION.zip"
 # The Lambda Function name, created already
-AWS_LAMBDA_FUNCTION="yourLambdaFunctionName"
+AWS_LAMBDA_FUNCTION="codeship-rebuild"
 
 ########################
 ### Helper Functions ###

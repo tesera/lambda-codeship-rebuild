@@ -1,3 +1,22 @@
+# lambda-codeship-rebuild
+
+> forked from: (original readme below) https://github.com/lorennorman/ruby-on-lambda
+
+An AWS Lambda function which rebuilds the last build in a Codeship project. Integrates directly into AWS API Gateway's Lambda simple proxy.
+
+requires event object to contain
+```json
+{
+    "queryStringParameters": {
+        "api_key": "your-codeship-api-key",
+        "project_id": "your-project-id",
+        "branch": "your-branch"
+    }
+}
+
+```
+Internaly the function uses this [script](https://github.com/codeship/scripts/blob/master/utilities/codeship_restart_build.sh) from Codeship to do the rebuild.
+
 # Ruby on AWS Lambda
 
 ## Why?
